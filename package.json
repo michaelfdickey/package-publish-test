@@ -1,0 +1,11 @@
+{
+  "name": "package-publish-test",
+  "version": "1.0.0",
+  "description": "A simple test package for GitHub Actions workflow trigger",
+  "main": "index.js",
+  "scripts": {
+    "publish": "npm publish"
+  },
+  "author": "",
+  "license": "ISC"
+}
