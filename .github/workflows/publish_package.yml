@@ -1,9 +1,12 @@
 name: Publish Package Workflow
 
-on:
+on: 
   push:
     branches:
       - main
+
+  workflow_dispatch:
+
 
 jobs:
   publish_package:
