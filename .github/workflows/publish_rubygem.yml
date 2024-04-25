@@ -1,0 +1,25 @@
+name: Publish RubyGem Workflow
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  publish_rubygem:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - name: Build Gem
+        run: gem build *.gemspec
+      - name: Publish to RubyGems
+        run: gem push *.gem
+        env:
+          RUBYGEMS_AUTH_TOKEN: ${{secrets.RUBYGEMS_AUTH_TOKEN}}
+      - name: Publish to GitHub Package Registry
+        run: gem push *.gem --host https://rubygems.pkg.github.com/${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
