@@ -17,6 +17,6 @@ jobs:
         run: gem build gemspec/package-publish-test.gemspec
 
       - name: Publish to GitHub Package Registry
-        run: gem push package-publish-test-*.gem --host https://rubygems.pkg.github.com/${{ michaelfdickey/package-publish-test }}
+        run: gem push package-publish-test-*.gem --host https://rubygems.pkg.github.com/${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
