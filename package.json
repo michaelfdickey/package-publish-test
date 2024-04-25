@@ -4,7 +4,15 @@
   "description": "A simple test package for GitHub Actions workflow trigger",
   "main": "index.js",
   "scripts": {
-    "publish": "npm publish"
+    "publish": "npm publish",
+    "publish:github": "npm publish --registry https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelfdickey/package-publish-test.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "",
   "license": "ISC"
