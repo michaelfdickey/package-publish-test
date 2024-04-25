@@ -1,4 +1,4 @@
-name: Ruby Gem
+name: Ruby Gem default
 
 on:
   workflow_dispatch:
