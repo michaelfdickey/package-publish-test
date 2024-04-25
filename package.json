@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "publish": "npm publish",
-    "publish:github": "npm publish --registry https://npm.pkg.github.com"
+    "publish:github": "npm publish --registry https://npm.pkg.github.com",
+    "build": "echo 'Build script placeholder'"
   },
   "repository": {
     "type": "git",
